@@ -5,7 +5,7 @@ import store from "./store";
 import "./assets/tailwind.css";
 
 import "./helpers/firebase.js";
-import "firebaseui/dist/firebaseui.css";
+// import "firebaseui/dist/firebaseui.css";
 
 Vue.config.productionTip = false;
 
