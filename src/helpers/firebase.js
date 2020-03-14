@@ -1,26 +1,22 @@
 import Vue from "vue";
 
-import firebase from 'firebase/app'
-import 'firebase/firebase-auth'
+import firebase from "firebase/app";
+import "firebase/firebase-auth";
 
-import * as firebaseui from 'firebaseui'
+import * as firebaseui from "firebaseui";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBSSsNMMNvxBJle_CmeWCo4Y528UrJfVFs",
-  authDomain: "super-awesome-application-787b.firebaseapp.com",
-  databaseURL: "https://super-awesome-application-787b.firebaseio.com",
-  projectId: "super-awesome-application-787b",
-  storageBucket: "super-awesome-application-787b.appspot.com",
-  messagingSenderId: "1045042367299",
-  appId: "1:1045042367299:web:8d9b72afc27e18b04c3df6"
-}
+  apiKey: "AIzaSyDIwsEnaYXHV-EW0AHzmiNwascXxzHtVCk",
+  authDomain: "loginexample-39db1.firebaseapp.com",
+  databaseURL: "https://loginexample-39db1.firebaseio.com",
+  projectId: "loginexample-39db1",
+  storageBucket: "loginexample-39db1.appspot.com",
+  messagingSenderId: "506969437339",
+  appId: "1:506969437339:web:a63e997764caf6ac74823e"
+};
 
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig);
+const ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-// initialize FirebaseUI Widget using Firebase.
-const ui = new firebaseui.auth.AuthUI(firebaseui.auth())
-
-Vue.prototype.$firebase = firebase
-Vue.prototype.$firebaseui = ui
-
-
+Vue.prototype.$firebase = firebase;
+Vue.prototype.$firebaseui = ui;

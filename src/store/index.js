@@ -5,7 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    user: {}
+    user: {
+      displayName: 'Alex'
+    }
   },
   getters: {
     getUser: state => state.user
@@ -14,6 +16,8 @@ export default new Vuex.Store({
     settingUser: (state, user) => (state.user = user)
   },
   actions: {
-    setUser: ({commit}, user) => commit("settingUser", user)
+    setUser: ({
+      commit
+    }, user) => commit("settingUser", user)
   }
 });
