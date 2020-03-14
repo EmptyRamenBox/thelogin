@@ -25,7 +25,7 @@
       <button
         v-if="user"
         class="p-2 mx-1 hover:text-indigo-700 hover:bg-white"
-        @click="logout"
+        @click="logOut"
       >
         Logout
       </button>
@@ -50,6 +50,13 @@ export default {
   computed: {
     user() {
       return this.$store.getters.getUser;
+    }
+  },
+  methods: {
+    logOut() {
+      this.$firebase.auth().signOut(); // logout from account
+      this.$store.dispatch("setUser", "");
+      this.$router.push("/"); // redirect user to main site
     }
   }
 };
