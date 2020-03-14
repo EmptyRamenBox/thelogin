@@ -5,9 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    user: {
-      displayName: ""
-    }
+    user: ''
   },
   getters: {
     getUser: state => state.user
